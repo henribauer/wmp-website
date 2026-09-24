@@ -1,0 +1,6 @@
+# Editing backups — git history replaces them
+*.bak
+# Superseded portraits kept locally only
+wp-content/uploads/wmp-redesign-assets/team/_pre-newphotos/
+# macOS
+.DS_Store

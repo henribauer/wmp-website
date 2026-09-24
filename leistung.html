@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leistung — WMP EUROCOM AG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root { --navy: #003865; --navy-deep: #001451; --navy-text: #004579; --magenta: #FF0089; --steel: #5a6e85;
+    --rule: rgba(0,56,101,.28); --ease: cubic-bezier(.16,1,.3,1); }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Roboto, Arial, Helvetica, sans-serif; color: var(--navy); background: #fff; }
+  a { color: inherit; }
+  .bar { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%); color: #fff; padding: 22px 64px; }
+  .bar .inner { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .bar a { text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.85); }
+  .bar a:hover { color: #fff; }
+  .bar .brand { font-size: 15px; font-weight: 700; letter-spacing: .18em; }
+  main { max-width: 1400px; margin: 0 auto; padding: 96px 64px; }
+  .head { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1.85fr); gap: clamp(32px,5vw,88px); align-items: start; }
+  .kicker { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--steel); }
+  h1 { font-size: clamp(30px,3.4vw,50px); font-weight: 900; text-transform: uppercase; letter-spacing: -.03em; line-height: 1.04; margin: 14px 0 0; overflow-wrap: anywhere; hyphens: auto; }
+  .lead { font-size: clamp(17px,1.5vw,21px); line-height: 1.6; color: #333; margin: 0; }
+  .body { margin: clamp(40px,5vw,72px) 0 0; display: grid; grid-template-columns: minmax(260px,1fr) minmax(0,2fr); gap: clamp(32px,5vw,88px); align-items: start; }
+  .body .label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--steel); padding-top: 6px; }
+  .body p { font-size: 16px; line-height: 1.75; color: #444; margin: 0 0 18px; max-width: 68ch; }
+  .more { border-top: 1px solid var(--rule); margin-top: clamp(56px,7vw,104px); padding-top: 10px; }
+  .more h2 { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--steel); margin: 14px 0 18px; }
+  .more a { display: grid; grid-template-columns: 3.2rem 1fr auto; align-items: center; gap: clamp(12px,2vw,32px); padding: clamp(12px,1.5vw,20px) 0;
+    border-bottom: 1px solid var(--rule); text-decoration: none; position: relative; isolation: isolate; transition: color .4s var(--ease); }
+  .more a::before { content: ""; position: absolute; inset: 0 -32px; background: var(--navy); z-index: -1; transform: scaleY(0); transform-origin: bottom; transition: transform .45s var(--ease); }
+  .more a:hover::before, .more a:focus-visible::before { transform: scaleY(1); }
+  .more a:hover, .more a:focus-visible { color: #fff; outline: none; }
+  .more .n { font-size: 13px; font-weight: 700; color: var(--steel); }
+  .more a:hover .n { color: #fff; opacity: .7; }
+  .more .t { overflow-wrap: anywhere; font-size: clamp(18px,2.2vw,30px); font-weight: 900; text-transform: uppercase; letter-spacing: -.03em; line-height: 1; }
+  .more .arw { opacity: 0; transform: translateX(-14px); transition: .4s var(--ease); }
+  .more a:hover .arw, .more a:focus-visible .arw { opacity: 1; transform: none; }
+  .cta { background: linear-gradient(150deg, var(--navy) 0%, var(--navy-deep) 100%); color: #fff; margin-top: clamp(64px,8vw,120px); padding: clamp(28px,3.4vw,48px); }
+  .cta .kicker { color: rgba(255,255,255,.55); }
+  .cta p { font-size: clamp(20px,2.2vw,28px); font-weight: 700; margin: 12px 0 22px; max-width: 30ch; }
+  .cta .links { display: flex; flex-wrap: wrap; gap: 26px; }
+  .cta .links a { font-size: 15px; color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.45); padding-bottom: 3px; transition: border-color .25s ease, color .25s ease; }
+  .cta .links a:hover { color: var(--magenta); border-bottom-color: var(--magenta); }
+  [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  [data-reveal].in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; } }
+  @media (max-width: 900px) { .head, .body { grid-template-columns: 1fr; gap: 24px; } }
+  @media (max-width: 800px) { .bar { padding: 18px 20px; } main { padding: 64px 20px; } }
+</style>
+</head>
+<body>
+<div class="bar"><div class="inner">
+  <a href="index.html#was-wir-koennen">&larr; Alle Leistungen</a>
+  <span class="brand">WMP EUROCOM AG</span>
+</div></div>
+
+<main>
+  <div class="head">
+    <div><span class="kicker" id="kicker"></span><h1 id="title"></h1></div>
+    <p class="lead" id="lead"></p>
+  </div>
+  <div class="body" data-reveal>
+    <div class="label">Was wir tun</div>
+    <div id="body"></div>
+  </div>
+  <div class="more" data-reveal>
+    <h2>Weitere Leistungen</h2>
+    <div id="more"></div>
+  </div>
+  <div class="cta" data-reveal>
+    <span class="kicker">Kontakt</span>
+    <p>Sprechen Sie uns an.</p>
+    <div class="links">
+      <a href="mailto:berlin@wmp-ag.de">berlin@wmp-ag.de</a>
+      <a href="tel:+493020611440">+49 30 206 114 0</a>
+      <a href="index.html#hier-finden-sie-uns">Standorte</a>
+    </div>
+  </div>
+</main>
+
+<script>
+const SERVICES = {
+ "unternehmenskommunikation": {
+  "title": "Unternehmenskommunikation",
+  "paras": [
+   "In einer Welt, die sich immer schneller verändert, sind flexible und wirkungsvolle Kommunikationsstrategien entscheidend, um nicht nur auf neue Entwicklungen zu reagieren, sondern sie auch aktiv mitzugestalten. Wir unterstützen unsere Kundinnen und Kunden bei ihrer öffentlichen Positionierung und sorgen dafür, dass ihre Außendarstellung den Anforderungen eines dynamischen Umfelds gerecht wird – online wie offline.",
+   "Gemeinsam mit Ihnen entwickeln wir agile Kommunikationskonzepte, die jederzeit anpassbar sind und dennoch klare Botschaften vermitteln. Ob es um die gezielte Ansprache der breiten Öffentlichkeit, den Dialog mit politischen Entscheidungsträgern, den Austausch mit Investoren oder die interne Kommunikation mit Mitarbeitenden geht: Wir behalten stets den Überblick über Ihre zentralen Stakeholder und stellen sicher, dass Ihre Reputation in jedem Bereich gestärkt wird.",
+   "Unser Ansatz beruht auf enger Zusammenarbeit mit Ihnen. Wir nehmen uns die Zeit, Ihr Unternehmen, Ihre Ziele und Ihre Besonderheiten zu verstehen – denn nur so können wir eine individuelle Strategie entwerfen, die Sie sicher ans Ziel führt. Sie geben die Richtung vor, wir übernehmen die Konzeption und Umsetzung. Dabei behalten wir mögliche Risiken im Blick und eröffnen Ihnen zugleich neue Chancen, um Ihr Profil zu schärfen. Unser höchstes Anliegen: Ihre Reputation nachhaltig zu schützen und Ihre Position am Markt sichtbar zu festigen."
+  ]
+ },
+ "krisenkommunikation": {
+  "title": "Krisenkommunikation",
+  "paras": [
+   "Wir sind eine der erfahrensten Beratungsgesellschaften in Deutschland für Krisen-, Transformations- und Change-Kommunikation. In schwierigen Situationen kommt es auf eine souveräne und gezielte Vorgehensweise an, um Reputationsrisiken durch Umstrukturierungen, Übernahmeversuche, unvorhergesehene Geschäftsvorfälle oder Compliance-Themen erfolgreich zu bewältigen.",
+   "Gemeinsam mit unseren Kunden etablieren wir einen Risiko- und Issue-Management-Prozess, um Entwicklungen rechtzeitig zu erkennen und präventive Maßnahmen zu ergreifen. Durch proaktive Kommunikationsszenarien behalten Sie den Informationsfluss stets unter Kontrolle und vermeiden unnötige Fehler in Phasen von Stress und Unsicherheit. Mit unserer Expertise führen wir Sie durch Transformations- und Veränderungsprozesse und stellen sicher, dass Ihr Unternehmen gestärkt aus jeder Krise hervorgeht."
+  ]
+ },
+ "litigation-pr": {
+  "title": "Litigation-PR",
+  "paras": [
+   "Wir unterstützen Sie bei Ihrer Kommunikation in Rechtsstreitigkeiten. Jeder hat das Recht auf juristischen Beistand vor Gericht, doch was ist mit der öffentlichen Meinung? Oft wird in den Medien und von der Öffentlichkeit längst geurteilt, bevor ein tatsächliches Urteil gesprochen wurde.",
+   "Hier kann sich ein Reputationsschaden schnell entwickeln, wenn nicht frühzeitig strategisch gehandelt wird. Indem Rechts- und Kommunikationsexperten frühzeitig zusammenarbeiten, lassen sich Missverständnisse aufklären und ungünstige Darstellungen korrigieren, bevor sie sich verfestigen. Recht zu haben bedeutet nicht automatisch, Recht zu bekommen. Wir sorgen dafür, dass Ihre Interessen auch in der öffentlichen Wahrnehmung sachlich, glaubwürdig und nachvollziehbar vertreten werden."
+  ]
+ },
+ "finanzkommunikation": {
+  "title": "Finanzkommunikation",
+  "paras": [
+   "Wir kennen nicht nur die Bedürfnisse von Anlegern und Investoren, sondern sprechen auch die Sprache der Analysten. Gerade in einem Umfeld, das von zunehmender Komplexität und hoher Dynamik an den Kapitalmärkten geprägt ist, ist eine klare und überzeugende Equity Story von entscheidender Bedeutung. Wir bereiten Ihre Inhalte kapitalmarktgerecht auf und tragen mit glaubwürdigen, zielgerichteten Botschaften zur Wertsteigerung Ihres Unternehmens bei – insbesondere bei Transaktionen, Kapitalerhöhungen und Börsengängen.",
+   "Darüber hinaus unterstützen wir Sie bei der professionellen Unternehmensberichterstattung, indem wir Ihr Profil durch eine präzise und konsistente Kommunikation stärken und Ihnen helfen, neue Themenschwerpunkte zu setzen. Auf Wunsch übernehmen wir das gesamte Projektmanagement für Ihre Finanz- und Geschäftsberichte: vom Konzept über das redaktionelle Feintuning bis hin zur Einhaltung regulatorischer Anforderungen. So stellen wir sicher, dass Ihre Berichte auch auf analytischer Ebene überzeugen und das Vertrauen von Aktionären, Investoren und weiteren Stakeholdern langfristig festigen.",
+   "Dank unseres breit aufgestellten Expertenteams sind wir in der Lage, Ihre individuellen Anforderungen zu verstehen und maßgeschneiderte Lösungen zu bieten, die sowohl Ihre strategischen Ziele als auch die Erwartungen des Kapitalmarktes erfüllen. Durch eine enge Zusammenarbeit mit Ihnen und Ihren internen Abteilungen sorgen wir dafür, dass Ihre Botschaften klar und wirksam sind – und damit auch nachhaltig zum Unternehmenserfolg beitragen."
+  ]
+ },
+ "government-advisory": {
+  "title": "Government Advisory",
+  "paras": [
+   "Wir beraten Institutionen des Bundes und der Länder ebenso wie internationale Regierungen in allen Fragen der Kommunikations- und Öffentlichkeitsarbeit. Dabei verstehen wir die spezifischen Herausforderungen, die sich aus unterschiedlichen politischen, kulturellen und wirtschaftlichen Rahmenbedingungen ergeben, und entwickeln passgenaue Strategien, um die Ziele unserer Kunden erfolgreich zu erreichen.",
+   "Im Mittelpunkt unserer Arbeit steht die Konzeption und Umsetzung maßgeschneiderter Kommunikationsmaßnahmen, die von der Investitions- und Tourismusförderung über die politische Krisenbewältigung bis hin zum kulturellen Eventmanagement reichen. Gemeinsam mit unseren Kunden analysieren wir die Ausgangslage und identifizieren zentrale Themen, Zielgruppen und Kommunikationskanäle, um eine nachhaltige Wirkung zu erzielen.",
+   "Ob es darum geht, neue Investoren anzusprechen, den Tourismus eines Landes oder einer Region zu stärken, den öffentlichen Diskurs zu gestalten oder kulturelle Veranstaltungen sichtbar zu machen: Wir sorgen für eine klare, konsistente und ansprechende Darstellung der Botschaften. Gerade in Krisensituationen ist eine schnelle und souveräne Kommunikation unverzichtbar – hier greifen wir auf unsere umfassende Erfahrung im Krisen- und Reputationsmanagement zurück.",
+   "Wir begleiten unsere Kunden nicht nur bei der Strategieentwicklung, sondern übernehmen auf Wunsch auch die operative Umsetzung. Dazu gehören beispielsweise:",
+   "Dabei achten wir stets auf eine enge Abstimmung mit den zuständigen Entscheidungsträgern und internen Abteilungen, um sicherzustellen, dass die entwickelten Maßnahmen im Einklang mit den übergeordneten politischen und strategischen Zielsetzungen stehen. Unser internationales Netzwerk und unsere langjährige Erfahrung im öffentlichen Sektor ermöglichen es uns, den Blick sowohl auf globale Zusammenhänge als auch auf regionale Besonderheiten zu richten.",
+   "So schaffen wir für unsere Kunden einen Mehrwert, der weit über die reine Umsetzung von Kommunikationsmaßnahmen hinausgeht – und tragen dazu bei, das Profil von Institutionen und Regierungen nachhaltig zu schärfen und deren Vorhaben erfolgreich zu positionieren."
+  ]
+ },
+ "public-affairs": {
+  "title": "Public Affairs",
+  "paras": [
+   "WMP hilft seinen Kundinnen und Kunden, die Herausforderungen der Politik souverän zu meistern. Wir beobachten und analysieren Gesetzgebungs- und Regulierungsprozesse in Deutschland und auf internationaler Ebene, um frühzeitig Chancen und Risiken für Ihr Unternehmen oder Ihre Organisation zu erkennen. Auf dieser Grundlage entwickeln wir passgenaue Strategien, damit Sie in der Kommunikation gegenüber Politik, Verbänden und Öffentlichkeit stets klar und überzeugend auftreten.",
+   "Unser fundiertes Netzwerk ermöglicht es uns, Brücken zu einer Vielzahl von Entscheidungsträgern zu bauen – von politischen Gremien über Ministerien bis hin zu Branchenverbänden und Interessengruppen. Dabei legen wir großen Wert darauf, dass Ihre Themen und Anliegen nicht nur gehört, sondern auch verstanden werden. Ob Sie neue Gesetzesvorhaben beeinflussen, Akzeptanz für eine bestimmte Regulierung schaffen oder strategische Allianzen schmieden möchten – wir stehen Ihnen als zuverlässiger Partner zur Seite, um Ihre Interessen wirkungsvoll zu vertreten und Ihr Profil im politischen Raum nachhaltig zu stärken."
+  ]
+ },
+ "ceo-kommunikation": {
+  "title": "CEO-Kommunikation",
+  "paras": [
+   "Die Positionierung der CEO und der Geschäftsleitung steht bei uns im Mittelpunkt. Wir verstehen, wie wichtig es ist, in einer immer komplexer werdenden Welt das Vertrauen von Investoren, Partnern, Medien und der Öffentlichkeit zu gewinnen und nachhaltig zu stärken. Gerade in herausfordernden Zeiten sorgen wir dafür, dass die Interessen unserer Kundinnen und Kunden gewahrt bleiben und sie ihren Handlungsspielraum nutzen können, um strategische Ziele erfolgreich umzusetzen.",
+   "Um dies zu gewährleisten, setzen wir sowohl auf bewährte Methoden der klassischen Öffentlichkeitsarbeit als auch auf innovative, digitale Kommunikationsformen. Diese Kombination versetzt uns in die Lage, maßgeschneiderte Strategien zu entwickeln, die auf das jeweilige Marktumfeld, die Unternehmenssituation und die individuellen Bedürfnisse zugeschnitten sind. Ob es sich um die Vorbereitung auf öffentliche Auftritte, die Durchführung von Krisenkommunikation oder den Aufbau und die Pflege eines positiven Images handelt – wir unterstützen unsere Klientinnen und Klienten dabei, ihre Botschaften klar zu formulieren und wirkungsvoll zu platzieren.",
+   "Besonders wertvoll sind dabei unsere langjährigen Beziehungen zu Entscheidungsträgern in Politik, Wirtschaft und Medien. Dank dieses etablierten Netzwerks können wir in entscheidenden Momenten schnell und zielgerichtet agieren, indem wir Türen öffnen, Zugang zu relevanten Stakeholdern ermöglichen und so den bestmöglichen Rahmen für den Erfolg unserer Kunden schaffen.",
+   "Unsere Beratung ist darauf ausgerichtet, eine starke Vertrauensbasis zu etablieren und die Reputation unserer Kundinnen und Kunden nachhaltig zu festigen. Wir begleiten Unternehmen auf dem gesamten Weg, angefangen bei der strategischen Planung bis hin zur operativen Umsetzung. Dabei arbeiten wir eng mit internen und externen Teams zusammen, um sicherzustellen, dass alle Kommunikationsmaßnahmen ineinandergreifen und einen spürbaren Mehrwert liefern.",
+   "Indem wir traditionelle und digitale Kanäle geschickt kombinieren, stellen wir sicher, dass Ihre Botschaften auf allen Ebenen ankommen und dabei den größtmöglichen Einfluss entfalten. Mit unserem ganzheitlichen Ansatz sorgen wir dafür, dass Sie jederzeit souverän auftreten und nachhaltig von einer klaren, konsistenten Positionierung profitieren können."
+  ]
+ },
+ "medientraining": {
+  "title": "Medientraining",
+  "paras": [
+   "Viele WMP-Berater kommen selbst aus dem Journalismus und kennen die deutsche Medienlandschaft aus erster Hand. Dieses Know-how lassen wir in intensive Medientrainings einfließen, die weit über eine reine Theorievermittlung hinausgehen. Mit praxisnahen Übungen und realistischen Interviewsimulationen lernen Sie, wie Sie Ihre Kernbotschaften prägnant formulieren und sich auch in anspruchsvollen Live-Situationen souverän präsentieren.",
+   "Ob bei TV-Auftritten, Radiobeiträgen oder der Beantwortung kritischer Presseanfragen – unser Fokus liegt darauf, Sie bestmöglich auf die Vielfalt medialer Formate vorzubereiten. Gerade in Krisenzeiten oder bei akuten Themen ist eine fundierte Medienkompetenz unerlässlich, um das eigene Anliegen glaubhaft zu vermitteln und die Beziehung zu Stakeholdern zu stärken. Auf Wunsch erweitern wir unser Angebot um Workshops für Ihre Kommunikationsabteilung und stellen sicher, dass alle relevanten Akteurinnen und Akteure im Unternehmen den professionellen Umgang mit Medien verinnerlichen.",
+   "Unsere Trainings und Workshops passen wir individuell auf Ihre Anliegen, persönlichen Stärken und Ziele an. So stellen wir sicher, dass Sie sich nicht nur sicher fühlen, sondern auch authentisch bleiben und Ihre Botschaften langfristig und überzeugend platzieren können."
+  ]
+ },
+ "corporate-publishing": {
+  "title": "Corporate Publishing",
+  "paras": [
+   "Von der Ideenfindung über Konzeption und Layout bis hin zum fertigen Druck – wir begleiten Ihre redaktionellen Projekte in allen Phasen. Ob Print- oder Online-Format, ob interne Kommunikation oder externe Publikation: WMP unterstützt Sie ganzheitlich bei der Erstellung und Umsetzung Ihrer Inhalte und übernimmt auf Wunsch auch das Content-Marketing.",
+   "Dank unserer langjährigen journalistischen Erfahrung wissen wir genau, wie wir Ihre Botschaften präzise, ansprechend und zielgruppengerecht formulieren. Wir gestalten Mitarbeiter- und Kundenmagazine ebenso wie externe Veröffentlichungen oder zusätzliche Informationsangebote auf Websites, Social-Media-Kanälen und in Newslettern. Dabei legen wir großen Wert auf eine konsistente und glaubwürdige Darstellung Ihres Unternehmens – abgestimmt auf Ihre individuellen Ziele und Ihre Corporate Identity.",
+   "Unser Team übernimmt die vollständige Redaktion Ihrer Publikation oder kooperiert eng mit Ihrer Kommunikationsabteilung, um eigene Formate zu realisieren. Dabei sorgen wir für einen reibungslosen Ablauf von der Planung bis zur Veröffentlichung – inklusive Zeit- und Ressourcenmanagement, Lektorat, Grafikdesign und technischer Produktion. Darüber hinaus entwickeln wir maßgeschneiderte Content-Marketing-Strategien, die Ihre Reichweite erhöhen und den gezielten Aufbau Ihrer Reputation unterstützen. So stellen wir sicher, dass Ihre Inhalte nicht nur überzeugen, sondern auch nachhaltig im Gedächtnis Ihrer Zielgruppen bleiben."
+  ]
+ },
+ "insolvenzkommunikation": {
+  "title": "Insolvenzkommunikation",
+  "paras": [
+   "Wir sind eine der führenden Beratungsgesellschaften für Insolvenzkommunikation und Krisenmanagement in Deutschland. Unternehmensinsolvenzen stellen nicht nur eine wirtschaftliche, sondern auch eine kommunikative Herausforderung dar. Die richtige Ansprache aller Stakeholder – von Gläubigern über Investoren bis hin zu Mitarbeitern und Medien – ist entscheidend für den Erhalt von Vertrauen und Reputation.",
+   "Unsere Expertise liegt in der Entwicklung und Umsetzung maßgeschneiderter Kommunikationsstrategien, die Transparenz schaffen und Unsicherheiten minimieren. Wir begleiten Unternehmen, Insolvenzverwalter und Restrukturierungsexperten bei der Planung und Durchführung professioneller Kommunikationsmaßnahmen, um die Weichen für eine erfolgreiche Sanierung oder geordnete Abwicklung zu stellen.",
+   "Ein vorausschauender Kommunikationsansatz hilft, Eskalationen zu vermeiden und den Handlungsspielraum zu bewahren. Durch gezielte Risiko- und Krisenkommunikation unterstützen wir unsere Kunden dabei, die öffentliche Wahrnehmung aktiv zu steuern, Vertrauen zu erhalten und den Übergang in eine neue Unternehmensstruktur oder Geschäftsstrategie bestmöglich zu gestalten."
+  ]
+ }
+};
+const ORDER = ["unternehmenskommunikation", "krisenkommunikation", "litigation-pr", "finanzkommunikation", "government-advisory", "public-affairs", "ceo-kommunikation", "medientraining", "corporate-publishing", "insolvenzkommunikation"];
+const slug = new URLSearchParams(location.search).get('s');
+const key = SERVICES[slug] ? slug : ORDER[0];
+const s = SERVICES[key], i = ORDER.indexOf(key);
+document.title = s.title + ' — WMP EUROCOM AG';
+document.getElementById('kicker').textContent = 'Leistung ' + String(i + 1).padStart(2, '0');
+document.getElementById('title').textContent = s.title;
+document.getElementById('lead').textContent = s.paras[0] || '';
+document.getElementById('body').innerHTML = s.paras.slice(1).map(p => '<p>' + p + '</p>').join('') || '<p>' + (s.paras[0] || '') + '</p>';
+document.getElementById('more').innerHTML = ORDER.filter(o => o !== key).map(o =>
+  '<a href="leistung.html?s=' + o + '"><span class="n">' + String(ORDER.indexOf(o) + 1).padStart(2, '0') +
+  '</span><span class="t">' + SERVICES[o].title + '</span><span class="arw" aria-hidden="true">&rarr;</span></a>').join('');
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .08 });
+document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
