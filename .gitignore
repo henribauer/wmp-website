@@ -4,3 +4,5 @@
 wp-content/uploads/wmp-redesign-assets/team/_pre-newphotos/
 # macOS
 .DS_Store
+# Unused logo variant, kept locally only
+wp-content/uploads/wmp-redesign-assets/site/wmp-logo-navy.png
