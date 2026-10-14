@@ -6,6 +6,17 @@ plus a template for the ten service detail pages.
 
 **Status: work in progress, not yet code-reviewed.**
 
+## Branches
+
+- `main`: the redesign as first snapshotted.
+- `claims`: a variant with a new video hero, the main claim and eight short claims in
+  "Was wir können", which moves directly after the hero, and a scroll-linked transition between
+  the two.
+
+| Desktop | Mobile |
+|---|---|
+| <img src="docs/screenshots/claims-desktop.png" width="480" alt="Claims variant on desktop: video hero with logo, main claim, first short claims"> | <img src="docs/screenshots/claims-mobile.png" width="180" alt="Claims variant on mobile"> |
+
 ## Run it
 
 ```
